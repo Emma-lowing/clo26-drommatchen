@@ -8,3 +8,21 @@
 // TODO: Anropa match.Presentera()
 
 // TODO: Anropa match.AnnounceraMålskytt() med båda spelarna
+
+
+class Program
+{
+    static void Main()
+    {
+        Spelare jamieTart = new Spelare("Jamie Tart", 10, "Forward");
+        Spelare samObisanya = new Spelare("Sam Obisanya", 24, "Forward");
+
+        Match match = new Match("Ritchmond", "Manchester City", "2026-11-10");
+
+        match.Presentera();
+        match.AnnounceraMålskytt(jamieTart);
+        match.AnnounceraMålskytt(samObisanya);
+
+
+    }
+}

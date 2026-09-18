@@ -47,7 +47,7 @@ public class Match
     public void Presentera()
     {
         Console.WriteLine($"Drömlagen {_hemmalag} vs {_bortalag} - {_datum}");
-        Console.WriteLine();
+        Console.WriteLine(); //För att det ska se snyggare ut 
     }
 
     // Metod 2: skriv ut spelarens namn, nummer och position
