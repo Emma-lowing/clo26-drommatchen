@@ -14,10 +14,10 @@ class Program
 {
     static void Main()
     {
-        Spelare jamieTart = new Spelare("Jamie Tart", 10, "Forward");
-        Spelare samObisanya = new Spelare("Sam Obisanya", 24, "Forward");
+        Spelare jamieTart = new Spelare("Jamie Tart", 10, "Forward",0);
+        Spelare samObisanya = new Spelare("Sam Obisanya", 24, "Forward",0);
 
-        Match match = new Match("Ritchmond", "Manchester City", "2026-11-10");
+        Match match = new Match("Richmond", "Manchester City", "2026-11-10");
 
         match.Presentera();
         match.AnnounceraMålskytt(jamieTart);
