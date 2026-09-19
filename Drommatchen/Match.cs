@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 public class Match
 {
     // Privata fält
@@ -46,13 +48,27 @@ public class Match
     // Metod 1: skriv ut matchens lag och datum
     public void Presentera()
     {
-        Console.WriteLine($"Drömlagen {_hemmalag} vs {_bortalag} - {_datum}");
+        Console.WriteLine($"Drömlagen {_hemmalag} vs {_bortalag} - {_datum} \n");
         Console.WriteLine(); //För att det ska se snyggare ut 
     }
 
     // Metod 2: skriv ut spelarens namn, nummer och position
     public void AnnounceraMålskytt(Spelare spelare)
     {
+        spelare.ÖkaMål();
         Console.WriteLine($"MÅÅÅL! #{spelare.Nummer} {spelare.Namn} ({spelare.Position})");
+    }
+
+    //Metod 3: ska redogöra för om spelaren är matchhjälten eller inte genom bool true/false
+    public bool ÄrMatchhjälte(Spelare spelare1, Spelare spelare2)
+    {
+        if (spelare1.Mål > spelare2.Mål)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

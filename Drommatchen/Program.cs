@@ -14,14 +14,17 @@ class Program
 {
     static void Main()
     {
-        Spelare jamieTart = new Spelare("Jamie Tart", 10, "Forward",0);
-        Spelare samObisanya = new Spelare("Sam Obisanya", 24, "Forward",0);
+        Spelare jamieTart = new Spelare("Jamie Tart", 10, "Forward");
+        Spelare samObisanya = new Spelare("Sam Obisanya", 24, "Forward");
 
         Match match = new Match("Richmond", "Manchester City", "2026-11-10");
 
         match.Presentera();
+        match.AnnounceraMålskytt(samObisanya);
         match.AnnounceraMålskytt(jamieTart);
         match.AnnounceraMålskytt(samObisanya);
+        Console.WriteLine($"ÄrMatchhjälte - {samObisanya.Namn}: {match.ÄrMatchhjälte(samObisanya,jamieTart)}");
+        Console.WriteLine($"ÄrMatchhjälte - {jamieTart.Namn}: {match.ÄrMatchhjälte(jamieTart,samObisanya)}");
 
 
     }

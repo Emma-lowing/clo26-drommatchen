@@ -45,11 +45,17 @@ public class Spelare
     }
 
     // Konstruktor
-    public Spelare(string namn, int nummer, string position, int mål)
+    public Spelare(string namn, int nummer, string position)
     {
         _namn = namn;
         _nummer = nummer;
         _position = position;
-        _mål = mål;
+        _mål = 0;
+    }
+
+    //Metod för att på ett kontrollerat sätt ändra _mål utan att förlora en del av inkapslingen
+    public void ÖkaMål()
+    {
+        _mål += 1;
     }
 }
