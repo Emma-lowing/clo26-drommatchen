@@ -54,7 +54,7 @@
 
 ### Varför vi löste det såhär
 
-> Jag valde att låta varje spelare börja med 0 mål eftersom målen ska registreras under matchens gång. Eftersom _mål är privat ville jag inte ändra det direkt från klassen Match, utan skapade istället metoden ÖkaMål() i Spelare. På så sätt ansvarar Spelare själv för att ändra sitt antal mål. Jag lät ÄrMatchhjälte() returnera en bool istället för att skriva ut resultatet direkt. Då kan metoden bara avgöra om spelaren är matchhjälte eller inte, medan Main bestämmer vad som ska göras med resultatet.
+>Jag skrev _mål = 0 i konstruktorn istället för att lägga till int mål som en parameter. Det gör att varje nytt spelarobjekt automatiskt börjar med 0 mål. Antalet mål ökar sedan under matchens gång genom metoden ÖkaMål(), som anropas i AnnounceraMålskytt(). Eftersom _mål är privat ville jag inte ändra det direkt från klassen Match, utan skapade istället metoden ÖkaMål() i Spelare. På så sätt ansvarar Spelare själv för att ändra sitt antal mål. Jag lät ÄrMatchhjälte() returnera true eller false istället för att skriva ut resultatet direkt. På så sätt tar ÄrMatchhjälte() reda på om spelaren är matchhjälte, medan Main skriver ut svaret.
 
 ---
 
